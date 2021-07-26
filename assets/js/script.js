@@ -5,9 +5,9 @@ var currentHour = currentDate.hour();
 
 var displayDate = moment().format("dddd, MMMM Do");
 
+
 // displays the current date at the top of the screen
 $("#currentDay").text(displayDate);
-
 
 $(".time-block").each(function() {
     // selects the span of each child inside the hour class
@@ -15,7 +15,7 @@ $(".time-block").each(function() {
 
     // converts the span into an integer
     var scheduleHour = parseInt(scheduleTime.text());
-
+    
     // checks to see if the current hour is greater, less than, or equal to the schedule hour
     if (currentHour > scheduleHour) {
         // if the currentHour is greater than the scheduleHour adds the class of past to the time-block
@@ -26,7 +26,7 @@ $(".time-block").each(function() {
     } else {
         // otherwise if the times are equal it adds the class of present to the time-block
         $(this).addClass("present");
-    }
+    };
 });
 
 
